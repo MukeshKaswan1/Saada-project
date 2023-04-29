@@ -7,7 +7,9 @@ import Card3 from "../../assets/card3.svg";
 import Card4 from "../../assets/card4.svg";
 import Card5 from "../../assets/card5.svg";
 import {Link} from 'react-router-dom';
-const ClassList = (props) => {
+
+const ClassList = (props, {SearchData}) => {
+  
   const [show, setShow] = useState(false);
   const toggle = () => setShow(prevState=>!prevState);
   const [activeTab, setActiveTab] = useState("1");
