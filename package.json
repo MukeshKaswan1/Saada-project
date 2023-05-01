@@ -10,7 +10,8 @@
     "mobiscroll": "^3.0.0-beta6",
     "mobiscroll-react": "^4.0.0",
     "mongoose": "^6.0.8",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.13",
+    "react-icons": "^4.8.0"
   },
   "scripts": {
     "start": "nodemon server/app.js",
