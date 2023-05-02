@@ -99,7 +99,7 @@ const CreateAssignment = (props) => {
               name: values.name,
               desc: values.description,
               dueDate: new Date(values.dueDate).getTime(),
-              fileLink: firebaseURL,
+               fileLink: firebaseURL,
               creatorEmail: userData.userEmail,
             },
             {

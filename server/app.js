@@ -6,7 +6,11 @@ const path = require('path');
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin:"http://localhost:3000"
+    }
+));
 
 const authRoutes = require('./routes/auth');
 const classroomRoutes = require('./routes/classroom');
@@ -14,6 +18,7 @@ const courseRoutes = require('./routes/course');
 const resourceRoutes = require('./routes/resource');
 const forumRoutes = require('./routes/forum');
 const browseRoutes = require('./routes/browse');
+
 
 
 app.use('/auth', authRoutes);

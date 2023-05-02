@@ -11,6 +11,7 @@ import CopyrightIcon from '@material-ui/icons/Copyright';
 import { useSelector } from 'react-redux';
 import { selectUserData } from '../../reduxSlices/authSlice';
 import LoginModal from '../partials/LoginModal/LoginModal';
+import FooterNav from '../partials/FooterNav/FooterNav';
 const Home = () => {
   const userData = useSelector(selectUserData);
   const [show, setShow] = useState(false);
@@ -39,33 +40,16 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="Footer mt-3">
-        <div className="row p-0 m-0">
-            <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-start px-0 py-2">
-                <div className="Footer_Copyright pe-2 pe-md-4 ms-0 ms-md-5 fw-bold">
-                  <CopyrightIcon style={{fontSize: "16px", marginTop: "-5px"}}/> Learner's Space 2022
-                </div>
-                <div className="ms-0 ms-md-4 ps-2 ps-md-0">
-                  learnerspace@gmail.com
-                </div>
-            </div>
-            <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end py-2">
-              <span className="px-2">
-                <FacebookIcon />
-              </span>
-              <span className="px-2">
-                <InstagramIcon/>
-              </span>
-              <span className="px-2">  
-                <TwitterIcon/>
-              </span>
-              <span className="px-2">
-                <MailOutlineIcon/>
-              </span>
-            </div>
-        </div>
-      </div>
-      <LoginModal isModalOpen={show} toggleModal={toggle} setShow={setShow}/>
+    
+           <div>
+           <FooterNav/>  
+           <LoginModal isModalOpen={show} toggleModal={toggle} setShow={setShow}/>
+           </div>
+         
+            
+           
+      
+     
     </div>
   );
 }
